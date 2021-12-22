@@ -1,0 +1,39 @@
+composition:
+  _id: 3932623d-e5dd-4962-82f0-b8c3c0ad4541
+  type: page
+  _name: Home
+  _slug: /
+  slots:
+    content:
+      - type: hero
+        parameters:
+          greeting:
+            type: text
+            value: Hello World
+      - type: $personalization
+        slots:
+          pz:
+            - type: hero
+              parameters:
+                greeting:
+                  type: text
+                  value: Default Message
+            - type: hero
+              parameters:
+                greeting:
+                  type: text
+                  value: Personalized for Stackblitz users!
+                intentTag:
+                  type: intentTag
+                  value:
+                    intents:
+                      stackblitz:
+                        str: 50
+        parameters:
+          trackingEventName:
+            type: text
+            value: Stackblitz demo
+  parameters: {}
+created: '2021-12-15T06:31:36.086346+00:00'
+modified: '2021-12-15T07:04:28.83653+00:00'
+pattern: false

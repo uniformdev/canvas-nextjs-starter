@@ -1,0 +1,17 @@
+id: page
+name: Page
+icon: file-document
+parameters: []
+slots:
+  - id: content
+    name: Content
+    allowedComponents:
+      - hero
+      - $personalization
+      - $test
+      - $localization
+    inheritAllowedComponents: false
+titleParameter: ''
+canBeComposition: true
+created: '2021-12-15T06:31:29.757051+00:00'
+updated: '2021-12-15T06:31:29.757051+00:00'
