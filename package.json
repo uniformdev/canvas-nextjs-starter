@@ -8,7 +8,13 @@
     "build": "run-s manifest build:next",
     "build:next": "next build",
     "start": "next start",
-    "manifest": "uniform optimize manifest download --output ./lib/intentManifest.json --apiKey uf1hnh35q0xns6g0jukleme7z386mqqe4p2hayhkdj7usm7p77g6rd3576hn7m7g2kr545mau9alped9w5a39ezrgfslkkpet --project cccb0f03-f9d7-421e-b395-4a70a1db0e7e"
+    "manifest": "uniform optimize manifest download --output ./lib/intentManifest.json",
+    "pull": "run-p pull:components pull:compositions",
+    "pull:components": "uniform presentation component pull ./data/components",
+    "pull:compositions": "uniform presentation composition pull ./data/compositions",
+    "push": "run-s push:components push:compositions",
+    "push:components": "uniform presentation component push ./data/components",
+    "push:compositions": "uniform presentation composition push ./data/compositions"
   },
   "dependencies": {
     "@uniformdev/canvas": "^14.0.0",
